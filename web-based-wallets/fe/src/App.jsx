@@ -5,7 +5,8 @@ function App() {
 
   return (
     <>
-      from React App
+
+      i am from react App
     </>
   )
 }

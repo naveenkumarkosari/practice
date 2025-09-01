@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hi there</h1>
+    <ul class="myList">
+        <li class="li">first</li>
+    </ul>
+    
+    <input placeholder="add todo" id="input"></input>
+    <button class ="button"> Add</button>
+</body>
+<script>
+    const xinp = document.querySelector('input')
+    button = document.querySelector(".button")
+    button.onclick=()=>{
+        const colors = ["blue","red","green","yellow"]
+        const randomIndex = Math.floor(Math.random()*colors.length,colors.length)
+        list = document.querySelector(".myList")
+        const li = document.createElement("li")
+        li.innerText =xinp.value;
+        li.style.color =colors[randomIndex]
+        list.appendChild(li)
+    } 
+</script>
+</html
