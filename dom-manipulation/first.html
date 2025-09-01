@@ -11,20 +11,31 @@
         <li class="li">first</li>
     </ul>
     
-    <input placeholder="add todo" id="input"></input>
-    <button class ="button"> Add</button>
+    <input placeholder="add todo" type="number" id="input"></input>
+    <button class ="add">+</button>
+    <button class="sub">-</button>
 </body>
 <script>
     const xinp = document.querySelector('input')
-    button = document.querySelector(".button")
-    button.onclick=()=>{
-        const colors = ["blue","red","green","yellow"]
-        const randomIndex = Math.floor(Math.random()*colors.length,colors.length)
+    addbutton = document.querySelector(".add")
+    subbutton = document.querySelector(".sub")
+    addbutton.onclick=()=>{
+        const colors = ["green"]
         list = document.querySelector(".myList")
         const li = document.createElement("li")
         li.innerText =xinp.value;
-        li.style.color =colors[randomIndex]
+        li.style.color =colors[0]
         list.appendChild(li)
+        // li.innerText = "";
     } 
+    subbutton.onclick=()=>{
+    const colors = ["red"]
+    list = document.querySelector(".myList")
+    const li = document.createElement("li")
+    li.innerText =xinp.value;
+    li.style.color =colors[0]
+    list.appendChild(li)
+    //  li.innerText = "";
+    }
 </script>
 </html
