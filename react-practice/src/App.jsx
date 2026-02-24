@@ -1,7 +1,3 @@
-import { useState } from 'react'
-import './App.css'
-import {PostComponent} from "./Components/PostComponent.jsx"
-
 function App() {
   return (
     <>
@@ -10,6 +6,7 @@ function App() {
       <p style={{ marginLeft:"auto"}}>profile</p>
       </div>
            <PostComponent/>
+      <ButtonComponent/>
     </>
   )
 }
