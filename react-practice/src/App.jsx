@@ -1,14 +1,66 @@
+import { PostComponent } from "./Components/PostComponent.jsx"
+import { ButtonComponent } from "./Components/ButtonComponent.jsx"
+import { BrowserRouter, Routes, Route, useNavigate, Outlet } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <div style={{display:"flex",flexDirection:"horizental"}}>
-      <p>naveen kumar kosari</p>
-      <p style={{ marginLeft:"auto"}}>profile</p>
-      </div>
-           <PostComponent/>
-      <ButtonComponent/>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<MainLayout />} >
+            <Route path="/" element={<Home />} />
+            <Route path="/posts" element={<PostComponent />} />
+            <Route path="/button" element={<ButtonComponent />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      {/* <buttoncomponent/> */}
     </>
   )
 }
 
-export default App
+function Home() {
+  const navigate = useNavigate()
+  function redirect() {
+    navigate("/posts")
+  }
+  return (
+    <>
+      <div style={{ display: "flex", flexdirection: "horizental" }}>
+        <p>naveen kumar kosari</p>
+        {/* <p style={{ marginleft: "auto" }}>profile</p> */}
+        <button onClick={redirect}>Posts</button>
+      </div>
+    </>
+  )
+}
+
+function NotFound() {
+  return (
+    <>
+      <p>page not found</p>
+    </>
+  )
+}
+function MainLayout() {
+  return (
+    <>
+      <div style={{ display: "flex", flexDirection: "horizental", justifyContent: "space-evenly" }}>
+        <p>Home</p>
+        <p>Posts</p>
+        <p>break</p>
+      </div>
+      <main>
+        <Outlet />
+      </main>
+      <div style={{ display: "flex", flexDirection: "horizental", justifyContent: "space-evenly" }}>
+        <p>Footer1</p>
+        <p>Footer2</p>
+        <p>Footer3</p>
+      </div>
+    </>
+  )
+}
+
+export default App;
