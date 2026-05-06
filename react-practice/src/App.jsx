@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, useNavigate, Outlet } from "react-router-
 import { UseRefPractice } from "./Components/Signup.jsx";
 import { Clock } from "./Components/Clock.jsx";
 import { ContextExample } from "./Components/ContextExample.jsx";
+import { RecoilExample } from "./Components/RecoilExample.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="posts" element={<PostComponent />} />
             <Route path="button" element={<ButtonComponent />} />
             <Route path="clock" element={<Clock />} />
+            <Route path="recoil" element={<RecoilExample />} />
           </Route>
         </Routes>
       </BrowserRouter>

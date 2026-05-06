@@ -18,15 +18,15 @@ export function ContextExample() {
 }
 
 function Increase() {
-  const { count, setCount } = useContext(practiceCtx)
+  const { setCount } = useContext(practiceCtx)
   return <>
-    <button onClick={() => setCount(count + 1)}>Increase</button>
+    <button onClick={() => setCount(count => count + 1)}>Increase</button>
   </>
 }
 function Decrease() {
-  const { count, setCount } = useContext(practiceCtx)
+  const { setCount } = useContext(practiceCtx)
   return <>
-    <button onClick={() => setCount(count - 1)}>Decrease</button>
+    <button onClick={() => setCount(count => count - 1)}>Decrease</button>
   </>
 }
 
