@@ -5,6 +5,7 @@ import { UseRefPractice } from "./Components/Signup.jsx";
 import { Clock } from "./Components/Clock.jsx";
 import { ContextExample } from "./Components/ContextExample.jsx";
 import { RecoilExample } from "./Components/ReduxExample.jsx";
+import { CustomHookExmaple } from "./Components/CustomHooks.jsx";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="button" element={<ButtonComponent />} />
             <Route path="clock" element={<Clock />} />
             <Route path="recoil" element={<RecoilExample />} />
+            <Route path="customhook" element={<CustomHookExmaple />} />
           </Route>
         </Routes>
       </BrowserRouter>
