@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, useNavigate, Outlet } from "react-router-
 import { UseRefPractice } from "./Components/Signup.jsx";
 import { Clock } from "./Components/Clock.jsx";
 import { ContextExample } from "./Components/ContextExample.jsx";
-import { RecoilExample } from "./Components/RecoilExample.jsx";
+import { RecoilExample } from "./Components/ReduxExample.jsx";
 
 function App() {
   return (
