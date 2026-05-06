@@ -3,6 +3,7 @@ import { ButtonComponent } from "./Components/ButtonComponent.jsx"
 import { BrowserRouter, Routes, Route, useNavigate, Outlet } from "react-router-dom";
 import { UseRefPractice } from "./Components/Signup.jsx";
 import { Clock } from "./Components/Clock.jsx";
+import { ContextExample } from "./Components/ContextExample.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/posts" element={<PostComponent />} />
             <Route path="/button" element={<ButtonComponent />} />
             <Route path="/create" element={<UseRefPractice />} />
+            <Route path="/context" element={<ContextExample />} />
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="/admin" element={<AdminLayout />} >
