@@ -14,7 +14,7 @@ const countSlice = createSlice({
 
 const store = configureStore({
   reducer: {
-    counter: countSlice.reducer
+    count: countSlice.reducer
   }
 })
 export function RecoilExample() {
@@ -40,6 +40,6 @@ function Decrease() {
 }
 
 function Value() {
-  const val = useSelector(state => state.counter.value)
+  const val = useSelector(state => state.count.value)
   return <><h3>{val}</h3></>
 }
